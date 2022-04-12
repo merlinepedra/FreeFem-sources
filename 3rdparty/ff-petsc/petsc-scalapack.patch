@@ -1,5 +1,5 @@
 diff --git a/config/BuildSystem/config/packages/scalapack.py b/config/BuildSystem/config/packages/scalapack.py
-index 54334c571f..fee9bbf620 100644
+index a38f4cfd80..fee9bbf620 100644
 --- a/config/BuildSystem/config/packages/scalapack.py
 +++ b/config/BuildSystem/config/packages/scalapack.py
 @@ -1,10 +1,11 @@
@@ -18,11 +18,12 @@ index 54334c571f..fee9bbf620 100644
      self.includes         = []
      self.liblist          = [['libscalapack.a'],
                               ['libmkl_scalapack_lp64.a','libmkl_blacs_intelmpi_lp64.a'],
-@@ -16,22 +17,66 @@ class Configure(config.package.CMakePackage):
+@@ -16,23 +17,66 @@ class Configure(config.package.CMakePackage):
      self.buildLanguages   = ['FC']
      self.precisions       = ['single','double']
      self.downloadonWindows= 1
 -    self.makerulename     = 'scalapack'
+-    self.minCmakeVersion  = (3,2,0)
      return
  
    def setupDependencies(self, framework):
